@@ -1,2 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "shared/banner"%>
+<div class="d-flex justify-content-center">
+  <h1><span data-controller="typed-js"></span></h1>
+</div>
+
+
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">My Lists</h3>
+    <%= link_to "Create a user and enjoy this site!", new_user_session_path, class: "btn btn-flat" %>
+  </div>
+</div>
