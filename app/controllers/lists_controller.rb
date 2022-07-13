@@ -2,6 +2,7 @@ class ListsController < ApplicationController
   def index
     @lists = List.all
     @movies = Movie.all
+    authorize @list
   end
 
   def show
