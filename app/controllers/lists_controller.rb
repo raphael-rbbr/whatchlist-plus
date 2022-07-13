@@ -8,10 +8,12 @@ class ListsController < ApplicationController
   def show
     @bookmark = Bookmark.new
     @list = List.find(params[:id])
+    authorize @list
   end
 
   def new
     @list = List.new
+    authorize @list
   end
 
   def create
@@ -21,6 +23,7 @@ class ListsController < ApplicationController
     else
       render :new
     end
+    authorize @list
   end
 
   def destroy
